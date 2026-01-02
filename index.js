@@ -8,11 +8,12 @@ app.use(express.json());
 app.use(cors());
 
 // Neon Database Connection
+// Neon Database Connection
 const pool = new Pool({
-  connectionString: "psql 'postgresql://neondb_owner:npg_NRX83vMPbqKz@ep-young-cloud-ahtob84c-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'", // Yahan Neon ka link lagayein
+  // Sirf postgresql se shuru hone wala link likhein
+  connectionString: "postgresql://neondb_owner:npg_NRX83vMPbqKz@ep-young-cloud-ahtob84c-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require",
   ssl: { rejectUnauthorized: false }
 });
-
 // POST API: Employee Add Karna
 app.post('/api/employees', async (req, res) => {
   const { name, job } = req.body;
