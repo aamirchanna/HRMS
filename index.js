@@ -9,7 +9,7 @@ app.use(cors());
 
 // Neon Database Connection
 const pool = new Pool({
-  connectionString: "YOUR_NEON_CONNECTION_STRING_HERE", // Yahan Neon ka link lagayein
+  connectionString: "psql 'postgresql://neondb_owner:npg_NRX83vMPbqKz@ep-young-cloud-ahtob84c-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'", // Yahan Neon ka link lagayein
   ssl: { rejectUnauthorized: false }
 });
 
